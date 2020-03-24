@@ -1,10 +1,10 @@
 {
     "manifest_version": 2,
-    "name": "OLX Pro",
+    "name": "__MSG_name__",
     "description": "__MSG_description__",
     "version": "0.1.0",
     "author": "ostrojen1996",
-    "default_locale": "uk",
+    "default_locale": "en",
     "icons": {
         "48": "icons/logo48.png"
     },
