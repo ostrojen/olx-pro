@@ -1,11 +1,11 @@
 {
     "manifest_version": 2,
     "name": "OLX Pro",
-    "description": "Дозволяє не відволікатися на рекламу при пошуку на olx.ua",
+    "description": "__MSG_description__",
     "version": "0.1.0",
     "author": "ostrojen1996",
-    "icons":
-    {
+    "default_locale": "uk",
+    "icons": {
         "48": "icons/logo48.png"
     },
     "content_scripts": [
