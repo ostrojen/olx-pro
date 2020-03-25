@@ -4,5 +4,8 @@
   },
   "description": {
     "message": "Не відволікайтеся на рекламу при пошуку на olx.ua"
+  },
+  "label_top_hidden": {
+    "message": "Приховувати топ"
   }
 }
