@@ -14,6 +14,9 @@
         "default_icon": "icons/logo48.png",
         "default_popup": "html/popup.html"
     },
+    "permissions": [
+        "storage"
+    ],
     "content_scripts": [
     {
         "matches": ["*://*.olx.ua/*"],

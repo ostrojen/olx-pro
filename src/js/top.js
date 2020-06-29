@@ -1,7 +1,6 @@
 class Top {
-    constructor() {
-
-        const listContainer = document.getElementById('listContainer');
+    start() {
+        var listContainer = document.getElementById('listContainer');
         // Create an observer instance linked to the callback function
         const observer = new MutationObserver(mutations => {
             for (let mutation of mutations) {
@@ -10,7 +9,7 @@ class Top {
                     mutation.attributeName === 'class' &&
                     mutation.target.classList.contains('loaderActive') === false
                 ) {
-                    this.hideAll();
+                    this.checkHidden();
                 }
             }
         });
@@ -18,8 +17,7 @@ class Top {
         observer.observe(listContainer, { attributes: true });
 
         // Hide top offers after page loaded
-        this.hideAll();
-
+        this.checkHidden()
     }
 
     getOffers() {
@@ -33,8 +31,25 @@ class Top {
         this.getOffers().forEach(offer => { offer.hidden = false });
         return this;
     }
+    checkHidden() {
+        browser.storage.local.get('hiddenTop')
+        .then((response) => {
+            if(response.hiddenTop){
+                this.hideAll();
+            } else {
+                this.showAll();
+            }
+        })
+        .catch();
+    }
 }
 
+var top = new Top();
+
 window.addEventListener('DOMContentLoaded', event => {
-    var top = new Top();
+    top.start();
 });
+
+browser.storage.onChanged.addListener( event => {
+    top.start();
+})
