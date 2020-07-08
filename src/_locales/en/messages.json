@@ -1,0 +1,11 @@
+{
+  "name": {
+    "message": "OLX Pro"
+  },
+  "description": {
+    "message": "Do not be distracted by advertising when searching on olx.ua"
+  },
+  "label_top_hidden": {
+    "message": "Hidden top"
+  }
+}
